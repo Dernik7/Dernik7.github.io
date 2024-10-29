@@ -13,12 +13,12 @@
 </style>
 </head>
 <body>
-    <div id="field" onclick="showCoord(event)">
+    <div id="field" onclick="createZombie(event)">
     </div>
 </body>
 <script>
     let field=document.getElementById('field');
-    function showCoord(event){
+    function ShowCoord(event){
         console.log(event.clientX+':'+event.clientY);
     }
 let zombie = document.createElement('img');
@@ -30,6 +30,17 @@ zombie.style.position='fixed';
 zombie.style.top='100px';
 zombie.style.left=left+'px';
 function moveZombie(){
+    left=left+step;
+    zombie.style.left=left+'px';
+}
+setInterval(moveZombie,5);
+function createZombie(event){
+    zombie.style.position='fixed';
+zombie.style.top='100px';
+zombie.style.left=left+'px';
+console.log(event.clientX+':'+event.clientY);
+}
+function moveZombie(event){
     left=left+step;
     zombie.style.left=left+'px';
 }
