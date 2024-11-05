@@ -13,7 +13,6 @@
                  ['Samsung Galaxy A05', 64, 10154],
                  ['HONOR Magic V3', 512, 189999],
                  ['VERTEX C311', 0.5, 990]];
-                 let synt = [' : ', ' : ', ':'];
     console.log(phone[2][0]);
     console.log(phone[0][2]);
     console.log(phone[1][1]);
@@ -21,7 +20,7 @@
  document.write(phone);     // печать всего массива целиком 
     for(let i=0; i<5; i++){    // печать каждого элемента по очереди
          for(let k=0; k<3; k++){
-             document.write(phone[i][k] + synt[k]);
+             document.write(phone[i][k] + ':');
             }
     document.write('<br>');
     }
